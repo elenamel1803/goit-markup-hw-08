@@ -1,0 +1,13 @@
+@mixin font($fs, $ff, $fw, $lh, $ls, $c, $ta:left) {
+    font-size: $fs;
+    font-family: $ff;
+    font-weight: $fw;
+    line-height: $lh;
+    letter-spacing: $ls;
+    color: $c;
+    text-align: $ta;
+}
+@mixin section($pt, $pb) {
+    padding-top: $pt;
+    padding-bottom:  $pb;
+} 

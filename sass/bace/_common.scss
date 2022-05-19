@@ -1,0 +1,62 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: var(--main-text-color);
+    margin: 0;
+}
+.list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.link {
+    text-decoration: none;    
+    transition: var(--transition);
+    transition-property: color;
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+.title{
+    @include font( 36px, null, null, 1.17, 0.03em, null, center);
+    margin-bottom: 50px;
+}
+.logo{
+    @include font( 26px, null, 700, 1.19, 0.03em, var(--accent-color), null);
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    display: inline-block;
+}
+.soc-link{
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+    transition-property: background-color;
+    &:hover,
+    &:focus{
+        background-color: var(--accent-color);
+    }
+}
+.btn{
+    display: flex;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    @include font( 16px, null, 700, 1.88, 0.06em, var(--backgroun-text-color), center);
+    align-items: center;
+    justify-content: center;
+    background: var(--main-btn-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    transition: var(--transition);
+    transition-property: background;
+    &:hover,
+    &:focus {
+        background: var(--second-btn-color);
+    }
+}

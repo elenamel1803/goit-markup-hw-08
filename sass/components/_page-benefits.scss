@@ -1,0 +1,29 @@
+.benefits__list {
+    display: flex;    
+}
+.benefits__item{
+    max-width: 270px;
+    &:not(:last-child) {
+        margin-right: 30px;
+    }    
+}
+.benefits-block{
+    display: flex;
+    height: 120px;
+    background: #F5F4FA;
+    border-radius: 4px;    
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    &__icon{
+        display: block;
+    }
+}
+.benefits__title {
+    @include font(null, null, null, 1.14, 0.03em, null, null);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.benefits__text{
+    @include font(null, null, null, 1.71, 0.03em, var(--second-text-color), null);
+}
