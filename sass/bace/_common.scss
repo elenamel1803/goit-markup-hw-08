@@ -19,8 +19,12 @@ body {
     }
 }
 .title{
-    @include font( 36px, null, null, 1.17, 0.03em, null, center);
-    margin-bottom: 50px;
+    @include font( 28px, null, null, 1.18, 0.03em, null, center);
+    margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+        @include font( 36px, null, null, 1.17, null, null, null);
+        margin-bottom: 50px;
+    }
 }
 .logo{
     @include font( 26px, null, 700, 1.19, 0.03em, var(--accent-color), null);
