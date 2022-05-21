@@ -22,7 +22,7 @@
     <title>Портфолио</title>
   </head>
   <body>
-    <header class="header">
+    <!-- <header class="header">
       <div class="container">
         <a href="/" class="header__logo logo" lang="en"
           >Web<span class="header__logo--black" lang="en">Studio</span></a
@@ -53,7 +53,7 @@
           </li>
         </ul>
       </div>
-    </header>
+    </header> -->
     <main class="portfolio">
       <section class="portfolio section">
         <div class="container">
@@ -226,53 +226,55 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <div>
-          <a href="/" class="footer__logo logo" lang="en"
-          >Web<span class="footer__logo--white" lang="en">Studio</span></a>
-          <address class="address">
-            <ul class="address__list list">
-              <li class="address__item">
-                <a
-                  class="address__link address__link--bold link"
-                  href="https://goo.gl/maps/qoJzxrVLCb3UoENp8"
-                  >г. Киев, пр-т Леси Украинки, 26</a>
+        <div class="footer-wrapper">
+          <div class="footer-block">
+            <a href="/" class="footer__logo logo" lang="en"
+            >Web<span class="footer__logo--white" lang="en">Studio</span></a>
+            <address class="address">
+              <ul class="address__list list">
+                <li class="address__item">
+                  <a
+                    class="address__link address__link--bold link"
+                    href="https://goo.gl/maps/qoJzxrVLCb3UoENp8"
+                    >г. Киев, пр-т Леси Украинки, 26</a>
+                </li>
+                <li class="address__item">
+                  <a class="address__link link" href="mailto:info@example.com">info@example.com</a>
+                </li>
+                <li class="address__item">
+                  <a class="address__link link" href="tel:+380991111111">+38 099 111 11 11</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="social">
+            <p class="social__title">присоединяйтесь</p>
+            <ul class="social__list list">
+              <li class="social__item">
+                <a href="" class="social__link soc-link">
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./img/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
-                <a class="address__link link" href="mailto:info@example.com">info@example.com</a>
+              <li class="social__item">
+                <a href="" class="social__link soc-link"><svg class="social__icon" width="20" height="20">
+                  <use href="./img/icons.svg#icon-twitter"></use>
+                </svg></a>
               </li>
-              <li class="address__item">
-                <a class="address__link link" href="tel:+380991111111">+38 099 111 11 11</a>
+              <li class="social__item">
+                <a href="" class="social__link soc-link"><svg class="social__icon" width="20" height="20">
+                  <use href="./img/icons.svg#icon-facebook"></use>
+                </svg></a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link soc-link"><svg class="social__icon" width="20" height="20">
+                  <use href="./img/icons.svg#icon-linkedin"></use>
+                </svg></a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="social">
-          <p class="social__title">присоединяйтесь</p>
-          <ul class="social__list list">
-            <li class="social__item">
-              <a href="" class="social__link soc-link">
-                <svg class="social__icon" width="20" height="20">
-                  <use href="./img/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="" class="social__link soc-link"><svg class="social__icon" width="20" height="20">
-                <use href="./img/icons.svg#icon-twitter"></use>
-              </svg></a>
-            </li>
-            <li class="social__item">
-              <a href="" class="social__link soc-link"><svg class="social__icon" width="20" height="20">
-                <use href="./img/icons.svg#icon-facebook"></use>
-              </svg></a>
-            </li>
-            <li class="social__item">
-              <a href="" class="social__link soc-link"><svg class="social__icon" width="20" height="20">
-                <use href="./img/icons.svg#icon-linkedin"></use>
-              </svg></a>
-            </li>
-          </ul>
-        </div>
+          </div>
+        </div>  
         <div class="subscribe">
           <p class="subscribe__text">Подпишитесь на рассылку</p>
           <Form>
