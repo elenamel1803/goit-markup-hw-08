@@ -203,6 +203,111 @@ body {
   color: var(--logo-color-studio);
 }
 
+.header-menu__btn {
+  margin-left: auto;
+  background-color: inherit;
+}
+.header-menu__btn:hover .header-menu__icon, .header-menu__btn:focus .header-menu__icon {
+  fill: var(--accent-color);
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background-color: #fff;
+}
+.mob-menu .container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+.mob-menu__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+.mob-menu__close-btn:hover, .mob-menu__close-btn:focus {
+  fill: var(--accent-color);
+}
+
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu__link {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: inherit;
+}
+
+.mob-connect {
+  margin-bottom: 64px;
+}
+
+.mob-connect__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-connect__link {
+  display: block;
+  color: var(--second-text-color);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.mob-connect__link--accent {
+  color: var(--accent-color);
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.mob-soc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mob-soc__link {
+  color: var(--accent-color);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: center;
+  text-align: left;
+}
+
+@media screen and (max-width: 767.98px) {
+  .navigation {
+    display: none;
+  }
+}
+
 .menu-list {
   margin-left: 93px;
   display: flex;
@@ -243,6 +348,11 @@ body {
 .connect-list {
   display: flex;
   margin-left: auto;
+}
+@media screen and (max-width: 767.98px) {
+  .connect-list {
+    display: none;
+  }
 }
 
 .connect-list__item:not(:first-child) {
