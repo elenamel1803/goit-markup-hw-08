@@ -7,19 +7,27 @@
     display: flex;
     align-items: center;
 }
-.header__logo{    
-    padding-top: 24px;
-    padding-bottom: 25px;
+.header__logo{
+    padding-top: 26px;
+    padding-bottom: 26px;
+    @media screen and (min-width: 1200px) {
+        padding-top: 24px;
+        padding-bottom: 25px;
+    }
+    
 }
 .header__logo--black{
     color: var(--logo-color-studio);
 }
-.header-menu__btn{
+.header-menu__open-btn{
     margin-left: auto;
     background-color: inherit;
     &:hover .header-menu__icon,
     &:focus .header-menu__icon {
         fill: var(--accent-color);
+    }
+    @media screen and (min-width: 768px) {
+        display: none;
     }
 }
 .mob-menu {
@@ -31,7 +39,7 @@
     height: 100vh;
     padding-top: 48px;
     padding-bottom: 48px;
-    background-color: #fff;
+    background-color: var(--main-backgroun-color);
     .container{
         display: flex;
         flex-direction: column;
@@ -39,6 +47,9 @@
         justify-content: space-between;
         align-items: flex-start;
         overflow-y: auto;
+        @media screen and (min-width: 768px) {
+        display: none;
+        }
     }
 }
 
@@ -58,12 +69,6 @@
         fill: var(--accent-color);
     }
 }
-
-.mob-menu__icon {}
-
-.mob-menu__list {
-}
-
 .mob-menu__item {
     &:not(:last-child) {
         margin-bottom: 32px;
@@ -71,8 +76,7 @@
 }
 
 .mob-menu__link {
-    @include font(40px, null, 500, 1.18, 0.02em, null);
-    color: inherit;
+    @include font(40px, null, 500, 1.18, 0.02em, inherit, null);
 }
 
 .mob-connect {
@@ -81,30 +85,40 @@
 
 .mob-connect__item {
     &:not(:last-child) {
-            margin-bottom: 32px;
-        }
+        margin-bottom: 32px;
+    }
 }
 
 .mob-connect__link {
     display: block;
-    color: var(--second-text-color);
-    @include font(24px, null, 500, 1.17, 0.02em, null);
+    @include font(24px, null, 500, 1.17, 0.02em, var(--second-text-color), null);
 }
 .mob-connect__link--accent{
-    color: var(--accent-color);
-    @include font(34px, null, 500, 1.18, 0.02em, null);
+    @include font(34px, null, 500, 1.18, 0.02em, var(--accent-color), null);
 }
 
 .mob-soc {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.mob-soc__item {
+    &:not(:last-child) {
+        margin-right: 10px;
+        height: 100%;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+        padding-right: 10px;
+    }
 }
 
-.mob-soc__item {}
-
 .mob-soc__link {
-    color: var(--accent-color);
-    @include font(18px, null, 500, 1.22, 0.02em, center);
+    display: block;
+    @include font(18px, null, 500, 1.22, 0.02em, var(--accent-color), center);
+    // font-size: 100%;
+    // line-height: 100%;
+}    
+.no-scroll{
+    overflow: hidden;
 }
 
 .navigation{
@@ -113,8 +127,11 @@
     }
 }
 .menu-list{
-    margin-left: 93px;
+    margin-left: 88px;
     display: flex;
+    @media screen and (min-width: 1200px) {
+        margin-left: 93px;
+    }
 }
 .menu-list__item{
     position: relative;
@@ -136,32 +153,47 @@
     }
 }
 .menu-list__link{
-    @include font(null, null, 500, 1.14, 0.02em, inherit);
+    @include font(null, null, 500, 1.14, 0.02em, inherit, null);
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
 }
 .connect-list{
-    display: flex;
-    margin-left: auto;
     @media screen and (max-width: 767.98px) {
-            display: none;
-        }
+        display: none;
+    }
+    display: block;
+    margin-left: auto;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
 }
 .connect-list__item {
-    &:not(:first-child){
-    margin-left: 50px;
+    @media screen and (max-width: 1199.98px) {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }    
+    @media screen and (min-width: 1200px) {
+        &:not(:first-child){
+            margin-left: 30px;
+        }
     }
 }
 .connect-list__link{
-    @include font(null, null, 500, 1.14, 0.02em, var(--second-text-color), null);
-    align-items: center;
-    display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    display: block;
+    // align-items: center;
+    @include font(12px, null, 500, 1.17, 0.02em, var(--second-text-color), null);
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        @include font(14px, null, null, 1.14, null, null, null);
+    }
+    
 }
 .connect-list__icon{
-    margin-right: 10px;
+    margin-right: 8px;
     background-position: center;
     background-size: contain;
     fill: currentColor;
@@ -170,5 +202,8 @@
     .connect-list__link:hover &,
     .connect-list__link:focus &{
         fill: var(--accent-color);
+    }
+    @media screen and (min-width: 1200px) {
+        margin-right: 10px;
     }
 }

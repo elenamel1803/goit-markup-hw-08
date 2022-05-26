@@ -27,16 +27,15 @@ body {
     }
 }
 .logo{
-    @include font( 26px, null, 700, 1.19, 0.03em, var(--accent-color), null);
+    @include font( 24px, null, 700, 1.17, 0.03em, var(--accent-color), null);
     font-family: 'Raleway', sans-serif;
     text-decoration: none;
     display: flex;
     justify-content: center;
     @media screen and (min-width: 1200px) {
-        display: inline-block;
-        justify-content: none;
+        justify-content: start;
+        @include font(26px, null, null, 1.19, null, null, null);
     }
-
 }
 .soc-link{
     display: flex;

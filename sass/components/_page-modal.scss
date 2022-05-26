@@ -8,8 +8,8 @@
     transition-property: opacity, visibility;
 }
 .modal{
-    width: 528px;
-    height: 581px;    
+    width: 450px;
+    height: 609px;    
     background: var(--main-backgroun-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -19,6 +19,10 @@
     transform: translate(-50%, -50%);
     transition: transform var(--transition);
     padding: 40px;
+    @media screen and (min-width: 1200px) {
+        width: 528px;
+        height: 581px;
+    }
 }
 .backdrop.is-hidden .modal{
     transform: scale(0.5) rotate(-180deg);
@@ -51,8 +55,11 @@
     transition-property: fill;
 }
 .modal__title {
-    @include font( 20px, null, 700, 1.15, 0.03em, var(--main-text-color), center);
+    @include font(20px, null, 700, 1.5, 0.03em, var(--main-text-color), center);
     margin-bottom: 12px;
+    @media screen and (min-width: 1200px) {
+    @include font( null, null, null, 1.15, null, null, null);
+    }
 }
 .form__item{
     &:nth-child(-n + 3) {
@@ -123,12 +130,17 @@
     } 
 }
 .form__checkbox-text{
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--second-text-color);
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
     &::before{
         content: "";
         width: 16px;
@@ -156,4 +168,7 @@
     @include font( null, null, null, 1.71, 0.03em,var(--accent-color), null);
     text-decoration-line: underline;
     margin-left: 5px;
+}
+.no-scroll {
+    overflow: hidden;
 }
