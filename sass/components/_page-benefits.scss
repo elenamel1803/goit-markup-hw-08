@@ -30,9 +30,12 @@
     }
 }
 .benefits__title {
-    @include font(null, null, null, 1.14, 0.03em, null, null);
+    @include font(null, null, null, 1.14, 0.03em, null, center);
     text-transform: uppercase;
     margin-bottom: 10px;
+    @media screen and (min-width: 768px) {
+        @include font(null, null, null, null, null, null, left);
+    }
 }
 .benefits__text{
     @include font(null, null, null, 1.71, 0.03em, var(--second-text-color), null);
