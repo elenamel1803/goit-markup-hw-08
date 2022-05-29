@@ -247,8 +247,9 @@ body {
   overflow-y: auto;
 }
 @media screen and (min-width: 768px) {
-  .mob-menu .container {
+  .mob-menu {
     display: none;
+    opacity: 0;
   }
 }
 
@@ -350,20 +351,22 @@ body {
   overflow: hidden;
 }
 
+.navigation {
+  margin-left: 88px;
+}
 @media screen and (max-width: 767.98px) {
   .navigation {
     display: none;
   }
 }
-
-.menu-list {
-  margin-left: 88px;
-  display: flex;
-}
 @media screen and (min-width: 1200px) {
-  .menu-list {
+  .navigation {
     margin-left: 93px;
   }
+}
+
+.menu-list {
+  display: flex;
 }
 
 .menu-list__item {
@@ -949,6 +952,7 @@ body {
   .footer-form__input {
     width: 358px;
     margin-right: 12px;
+    margin-bottom: 0;
   }
 }
 
@@ -1113,7 +1117,7 @@ body {
 }
 
 .modal {
-  width: auto;
+  width: 90%;
   height: auto;
   background: var(--main-backgroun-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1265,9 +1269,7 @@ body {
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
 }
 @media screen and (min-width: 1200px) {
   .form__checkbox-text {
@@ -1277,6 +1279,7 @@ body {
 }
 .form__checkbox-text::before {
   content: "";
+  display: inline-flex;
   width: 16px;
   height: 15px;
   border: 2px solid var(--main-text-color);
@@ -1298,12 +1301,11 @@ body {
 
 .form__checkbox-text-accent {
   display: inline-block;
-  box-sizing: border-box;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--accent-color);
   text-decoration-line: underline;
-  margin-left: 5px;
+  padding-left: 4px;
 }
 
 .no-scroll {
